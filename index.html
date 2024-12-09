@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SPEC Generator</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
+    </head>
+
+    <body>
+        <header>
+            <h1>SPEC Generator</h1>
+            <button id="export-btn">Export</button>
+            <button id="export-ai-btn">Export to Illustrator</button>
+        </header>
+        <main class="main-container">
+            <div class="input-container">
+                <section id="range-month-container" class="input-section"> 
+                    <div class="section-header">
+                        <h4>Range Month</h4>
+                        <button class="clear-btn" data-section="range-month">Clear</button>
+                    </div>
+                    <input type="text" id="range-month" name="range-month" placeholder="Range Month">
+                    <button id="add-range-month-button">Update</button>
+
+                    <h4>Style Code & Name</h4>
+                    <textarea id="style-code" name="style-code" placeholder="Style Code & Name"></textarea>
+                    <button id="add-style-code-button">Update</button>
+                    <button id="add-more-style-code-button">Add Second Line</button>
+                </section>
+
+                <section id="category-container" class="input-section">
+                    <div class="section-header">
+                        <h4>Category</h4>
+                        <button class="clear-btn" data-section="category">Clear</button>
+                    </div>
+                    <ol class="category-list">
+                        <li class="tag category-btn">GIRLS</li>
+                        <li class="tag category-btn">BABY GIRL</li>
+                        <li class="tag category-btn">TEEN GIRL</li>
+                        <li class="tag category-btn">BOYS</li>
+                        <li class="tag category-btn">BABY BOY</li>
+                        <li class="tag category-btn">TEEN BOY</li>
+                        <li class="tag category-btn">NEWBORN</li>
+                        <li class="tag category-btn">SLEEP</li>
+                        <li class="tag category-btn">ACC</li>
+                        <li class="tag category-btn">WOVEN</li>
+                        <li class="tag category-btn">KNIT</li>
+                        <li class="tag category-btn">C&S</li>
+                    </ol>
+
+                    <input type="text" id="add-category" name="add-category" placeholder="Add category">
+                    <button id="add-category-button">Add</button>
+                </section>
+
+                <section id="page-label-container" class="input-section">
+                    <div class="section-header">
+                        <h4>Page Label</h4>
+                        <button class="clear-btn" data-section="page-label">Clear</button>
+                    </div>
+                    <p>Page </p>
+                    <input type="text" id="add-page-label-1" name="add-page-label-1" placeholder="#">
+                    <p> of </p>
+                    <input type="text" id="add-page-label-2" name="add-page-label-2" placeholder="#">
+                    <button id="add-page-label-button">Add</button>
+                </section>
+
+                <section id="placement-container" class="input-section">
+                    <div class="section-header">
+                        <h4>Placement</h4>
+                        <button class="clear-btn" data-section="placement">Clear</button>
+                    </div>
+                    <ul class="placement-list">
+                        <li class="tag placement-btn">All over</li>
+                        <li class="tag placement-btn">Front</li>
+                        <li class="tag placement-btn">Back</li>
+                        <li class="tag placement-btn">Sleeve</li>
+                    </ul>
+
+                    <input type="text" id="add-placement" name="add-placement" placeholder="Add placement">
+                    <button id="add-placement-button">Add</button>
+                </section>
+
+                <section id="print-direction-container" class="input-section">
+                    <div class="section-header">
+                        <h4>Print Direction</h4>
+                        <button class="clear-btn" data-section="print-direction">Clear</button>
+                    </div>
+                    <ul class="print-direction-list">
+                        <li class="tag print-direction-btn">2 way</li>
+                        <li class="tag print-direction-btn">1 way</li>
+                    </ul>
+
+                    <input type="text" id="add-print-direction" name="add-print-direction" placeholder="Add print direction">
+                    <button id="add-print-direction-button">Add</button>
+                </section>
+
+                <section id="technique-container" class="input-section">
+                    <div class="section-header">
+                        <h4>Technique</h4>
+                        <button class="clear-btn" data-section="technique">Clear</button>
+                    </div>
+                    <ul class="technique-list">
+                        <li class="tag technique-btn">Matte thread emb</li>
+                        <li class="tag technique-btn">Waterbased</li>
+                        <li class="tag technique-btn">Rubber</li>
+                        <li class="tag technique-btn">Light Rubber</li>
+                        <li class="tag technique-btn">Digital</li>
+                        <li class="tag technique-btn">Puff</li>
+                        <li class="tag technique-btn">High Build</li>
+                        <li class="tag technique-btn">Boucle emb</li>
+                        <li class="tag technique-btn">Satin-stitch emb</li>
+                        <li class="tag technique-btn">Toothbrush emb</li>
+                    </ul>
+
+                    <input type="text" id="add-technique" name="add-technique" placeholder="Add technique">
+                    <button id="add-technique-button">Add</button>
+                </section>
+
+                <section id="print-scale-container" class="input-section">
+                    <div class="section-header">
+                        <h4>Print Scale</h4>
+                        <button class="clear-btn" data-section="print-scale">Clear</button>
+                    </div>
+                    <ul class="print-scale-list">
+                        <li class="tag print-scale-btn">100% scale</li>
+                        <li class="tag print-scale-btn">** Not to scale **</li>
+                    </ul>
+
+                    <input type="text" id="add-print-scale" name="add-print-scale" placeholder="Add print scale">
+                    <button id="add-print-scale-button">Add</button>
+                </section>
+
+                <section id="repeat-container" class="input-section">
+                    <div class="section-header">
+                        <h4>Repeat Size</h4>
+                        <button class="clear-btn" data-section="repeat">Clear</button>
+                    </div>
+
+                    <p>W:</p>
+                    <input type="text" id="repeat-width" name="repeat-width" placeholder="#">
+                    <p>mm H:</p>
+                    <input type="text" id="repeat-height" name="repeat-height" placeholder="#">
+                    <p>mm</p>
+                    <button id="add-repeat-button">Add</button>
+                </section>
+
+                <section id="add-image-container" class="input-section">
+                    <div class="section-header">
+                        <h4>Image</h4>
+                        <button class="clear-btn" data-section="image">Clear</button>
+                    </div>
+
+                    <button id="add-image-button">UPLOAD IMAGE</button>
+                </section>
+
+            </div>
+
+        
+
+
+
+            <section id="output-container" class="a3-container">
+                <div class="a3-content">
+                    <section id="header-container">
+                        <div class="border-box" id="header-box">
+
+                            <div class="left-text">
+                                <p id="brand-name" class="bold-text">COUNTRY ROAD &emsp; &emsp; &emsp;<span id="range-month-output">SEP 2024</span></p>
+                                <p id="style-code-output" class="style-code">STYLE NAME & CODE</p>
+                                <p id="style-code-output-2" class="style-code"></p>
+                            </div>
+
+                            <div class="right-text">
+                                <p id="category-output">CATEGORY</p>
+                                <p>PAGE <span id="page-label-output">LABEL</span></p>
+                            </div>
+                        </div>
+
+                        <div class="border-box" id="sub-header-box">
+                            <div class="left-text">
+                                <p class="label">PLACEMENT: <span id="placement-output"></span></p>
+                                <p class="label">TECHNIQUE: <span id="technique-output"></span></p>
+                            </div>
+
+                            <div class="right-text">
+                                <p id="print-direction-output" class="label">PRINT DIRECTION: </p>
+                                <p class="red-text">** Please do not wait for briefing to submit strike off **</p>
+                            </div>
+                        </div>
+
+                        <p id="print-scale-output" class="scale-label red-text bold-text">PRINT SCALE: </p>
+
+
+                        <p class="repeat-label">REPEAT SIZE: <span id="repeat-output"></span></p>
+                    </section>
+
+                    <section id="image-container"></section>
+                </div>
+            </section>
+
+
+
+
+
+        </main>
+    </body>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.6/purify.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    
+
+
+</html>

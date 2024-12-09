@@ -1,0 +1,243 @@
+/* Reset & Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Albert Sans', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Typography */
+h4 {
+    font-size: 12pt;
+}
+
+.right-text { text-align: right; }
+.red-text { color: red; }
+.bold-text { font-weight: bold; }
+.light-text { font-weight: 300; }
+.scale-label, .repeat-label {
+    font-size: 12pt;
+    text-align: center;
+}
+
+/* Layout Containers */
+.main-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border: .5pt solid black;
+    height: 100vh;
+    width: 300pt;
+    padding: 10pt;
+    overflow-y: scroll;
+    font-size: 10pt;
+}
+
+.output-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#image-container {
+    flex-grow: 1;
+    border: .5pt solid black;
+    width: calc(100% - 16mm);
+    height: 100%;
+    margin: 0 0mm 8mm 8mm;
+}
+
+/* Section Styles */
+.input-section {
+    margin: 5pt 0;
+    border: .5pt solid black;
+    padding: 5pt 10pt;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5pt;
+}
+
+/* Button Styles */
+
+#export-btn {
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#export-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.clear-btn {
+    font-size: 8pt;
+    padding: 2pt 4pt;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.clear-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.delete-btn {
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 10pt;
+    color: black;
+    padding: 0 3px;
+}
+
+.delete-btn:hover {
+    font-weight: bold;
+}
+
+/* Tag Styles */
+.tag {
+    background-color: #f0f0f0;
+    padding: 2px 3px;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.1s ease;
+    text-wrap: nowrap;
+    font-size: 11pt;
+    position: relative;
+    padding-right: 20px;
+}
+
+.tag.active {
+    background-color: #e9ddd4;
+}
+
+.tag:hover {
+    background-color: #e9ddd4;
+}
+
+.tag:active {
+    background-color: #decfc3;
+    color: white;
+}
+
+/* Input Field Styles */
+#style-code {
+    width: 100%;
+    height: 50pt;
+    padding: 5pt;
+    resize: none;
+    white-space: pre-wrap;
+    overflow-y: auto;
+}
+
+/* Number Input Styles */
+#add-page-label-1, 
+#add-page-label-2,
+#repeat-width, 
+#repeat-height {
+    width: 20pt;
+    -moz-appearance: textfield; /* Firefox */
+}
+
+/* Remove spinner buttons from number inputs */
+#add-page-label-1::-webkit-outer-spin-button,
+#add-page-label-1::-webkit-inner-spin-button,
+#add-page-label-2::-webkit-outer-spin-button,
+#add-page-label-2::-webkit-inner-spin-button,
+#repeat-width::-webkit-outer-spin-button,
+#repeat-width::-webkit-inner-spin-button,
+#repeat-height::-webkit-outer-spin-button,
+#repeat-height::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* A3 Container Styles */
+.a3-container {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.a3-content {
+    width: 297mm;
+    height: 420mm;
+    border: .5pt solid black;
+    transform-origin: center;
+    transform: scale(var(--scale-factor));
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Container Styles */
+#header-container {
+    margin: 8mm;
+    width: 281mm;
+}
+
+.border-box {
+    border: .5pt solid black;
+    padding: 2mm;
+    width: 281mm;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2mm;
+}
+
+/* Specific Element Styles */
+#add-range-month-button {
+    margin-bottom: 8pt;
+}
+
+#range-month-output, 
+#style-code-output, 
+#style-code-output-2, 
+#print-scale-output {
+    text-transform: uppercase;
+}
+
+/* Layout Helpers */
+#page-label-container > *:not(.section-header), 
+#repeat-container > *:not(.section-header) {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+
+
