@@ -668,7 +668,7 @@ addRepeatButton.addEventListener('click', () => {
     const width = repeatWidthInput.value;
     const height = repeatHeightInput.value;
     if (width && height) {
-        repeatOutput.textContent = `w ${width} X h ${height}`;
+        repeatOutput.textContent = `w ${width}mm X h ${height}mm`;
     }
 });
 
@@ -1001,7 +1001,6 @@ function createText(content, x, y, size, fontName, r, g, b, alignment) {
         try {
             var shouldBeBold = (
                 content.indexOf("PRINT SCALE:") === 0 ||
-                content === "** Please do not wait for briefing to submit strike off **" ||
                 content.indexOf("COUNTRY ROAD") !== -1
             );
             
